@@ -3,6 +3,7 @@ import '@/app/_styles/globals.css';
 import Header from './_components/Header';
 import Footer from './_components/Footer';
 import { Manrope } from 'next/font/google';
+import ToasterBar from './_components/Toaster';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ const RootLayout = ({ children }: LayoutProps) => {
       <body
         className={`${manrope.className} bg-neutral-50 text-neutral-600 flex flex-col min-h-screen`}
       >
+        <ToasterBar />
         <Header />
         <main className='flex-1 '>
           <div className='max-w-7xl mx-auto grid '>{children}</div>

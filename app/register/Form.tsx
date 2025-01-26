@@ -5,6 +5,7 @@ import Input from '../_components/Input';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import Select from '../_components/Select';
 import { getCountries } from 'country-state-picker';
+import toast from 'react-hot-toast';
 
 interface FormValues {
   name: string;
@@ -37,8 +38,10 @@ const Form = () => {
     },
   });
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
+  const onSubmit: SubmitHandler<FormValues> = async (data) => {
     console.log(data);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    toast.success('Registration successful!');
     reset();
   };
 
@@ -91,7 +94,7 @@ const Form = () => {
         error={errors?.country}
       />
 
-      <div className='flex items-center gap-4'>
+      <div className='flex items-center gap-4 '>
         <div className='w-1/4'>
           <Input
             id='dialCode'
@@ -104,14 +107,16 @@ const Form = () => {
           />
         </div>
 
-        <Input
-          id='phoneNumber'
-          placeholder=' 71 2834 2948'
-          type='tel'
-          label='Phone Number'
-          register={register}
-          error={errors?.phoneNumber}
-        />
+        <div className='grow'>
+          <Input
+            id='phoneNumber'
+            placeholder=' 71 2834 2948'
+            type='tel'
+            label='Phone Number'
+            register={register}
+            error={errors?.phoneNumber}
+          />
+        </div>
       </div>
 
       <Select

@@ -21,7 +21,7 @@ const links = [
 const Footer = () => {
   return (
     <footer className=' px-4 md:px-16 py-10 font-medium bg-white border-t-[1px] border-neutral-300'>
-      <div className='max-w-7xl mx-auto flex flex-col gap-6 md:flex-row items-center justify-between'>
+      <div className='max-w-7xl mx-auto flex text-sm md:text-base flex-col gap-6 md:flex-row items-center justify-between'>
         <Image src={logo} quality={80} alt='just projects' />
 
         <ul className='flex items-center gap-8'>
