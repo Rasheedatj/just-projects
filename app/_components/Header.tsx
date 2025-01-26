@@ -20,7 +20,7 @@ const links = [
 
 const Header = () => {
   return (
-    <header className='px-16 py-6 bg-primary-50'>
+    <header className='px-4 md:px-16 py-4 bg-primary-50'>
       <div className='max-w-7xl mx-auto flex items-center justify-between'>
         <Link href='/'>
           <Image
@@ -31,7 +31,14 @@ const Header = () => {
             height={60}
           />
         </Link>
-        <ul className='flex items-center gap-8'>
+
+        <div className='flex flex-col gap-3 md:hidden'>
+          <span className='bg-black rounded-sm h-[1px] w-10'></span>
+          <span className='bg-black rounded-sm h-[1px] w-8'></span>
+          <span className='bg-black rounded-sm h-[1px] w-6'></span>
+        </div>
+
+        <ul className='hidden md:flex items-center gap-8'>
           {links.map((link) => (
             <li
               key={link.title}
@@ -42,9 +49,9 @@ const Header = () => {
           ))}
         </ul>
 
-        <button className='bg-primary-700 rounded-lg px-6 py-2 text-white font-medium '>
-          Register now
-        </button>
+        <Link href='/register' className='hidden md:block'>
+          <button className='btn'>Register now</button>
+        </Link>
       </div>
     </header>
   );

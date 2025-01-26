@@ -20,9 +20,10 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer className='px-16 py-10 font-medium bg-white border-t-[1px] border-neutral-300'>
-      <div className='max-w-7xl mx-auto flex items-center justify-between'>
+    <footer className=' px-4 md:px-16 py-10 font-medium bg-white border-t-[1px] border-neutral-300'>
+      <div className='max-w-7xl mx-auto flex flex-col gap-6 md:flex-row items-center justify-between'>
         <Image src={logo} quality={80} alt='just projects' />
+
         <ul className='flex items-center gap-8'>
           {links.map((link) => (
             <li key={link.title}>
@@ -30,7 +31,8 @@ const Footer = () => {
             </li>
           ))}
         </ul>
-        <div className='flex items-center gap-4'></div>
+
+        {/* <div className='flex items-center gap-4'></div> */}
         <p>&copy; {new Date().getFullYear()} Just Projects</p>
       </div>
     </footer>

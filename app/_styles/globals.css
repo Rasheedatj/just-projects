@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply relative  bg-primary-700 border-2 border-black rounded-lg px-6 py-2 text-white font-medium;
+  }
+
+  .btn::after {
+    @apply absolute content-['']  w-full h-full border-2 border-primary-700 rounded-lg top-2 left-2 -z-10 opacity-100 transition-all duration-300  ease-in-out;
+  }
+}
