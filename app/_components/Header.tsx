@@ -1,7 +1,9 @@
+'use client';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '@/public/Logo.svg';
 import Image from 'next/image';
+import Menu from './Menu';
 
 const links = [
   {
@@ -19,6 +21,9 @@ const links = [
 ];
 
 const Header = () => {
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
+
+  const handleToggleMenu = () => setOpenMenu((s) => !s);
   return (
     <header className='px-4 md:px-16 py-4 bg-primary-50'>
       <div className='max-w-7xl mx-auto flex items-center justify-between'>
@@ -32,7 +37,10 @@ const Header = () => {
           />
         </Link>
 
-        <div className='flex flex-col gap-3 md:hidden'>
+        <div
+          className='flex flex-col gap-3 md:hidden'
+          onClick={handleToggleMenu}
+        >
           <span className='bg-black rounded-sm h-[1px] w-10'></span>
           <span className='bg-black rounded-sm h-[1px] w-8'></span>
           <span className='bg-black rounded-sm h-[1px] w-6'></span>
@@ -53,6 +61,8 @@ const Header = () => {
           <button className='btn'>Register now</button>
         </Link>
       </div>
+
+      {openMenu && <Menu links={links} onToggleMenu={handleToggleMenu} />}
     </header>
   );
 };

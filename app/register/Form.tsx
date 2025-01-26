@@ -55,6 +55,7 @@ const Form = () => {
 
   const activeCountry = watch('country');
 
+  // set the value of dialCode on country change
   setValue(
     'dialCode',
     countries.find(
@@ -65,7 +66,7 @@ const Form = () => {
 
   return (
     <form
-      className='px-4 md:px-16 pt-10 pb-20 flex flex-col gap-4 md:w-3/5 mx-auto'
+      className='px-8 md:px-16 pt-10 pb-20 flex flex-col gap-4 md:w-3/5 mx-auto'
       onSubmit={handleSubmit(onSubmit)}
     >
       <Input

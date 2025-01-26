@@ -9,8 +9,8 @@ const links = [
     href: '/',
   },
   {
-    title: 'Curriculum',
-    href: '/curriculum',
+    title: 'Privacy and Policy',
+    href: '/privacy',
   },
   {
     title: 'FAQs',
@@ -22,11 +22,20 @@ const Footer = () => {
   return (
     <footer className=' px-4 md:px-16 py-10 font-medium bg-white border-t-[1px] border-neutral-300'>
       <div className='max-w-7xl mx-auto flex text-sm md:text-base flex-col gap-6 md:flex-row items-center justify-between'>
-        <Image src={logo} quality={80} alt='just projects' />
+        <Image
+          src={logo}
+          quality={80}
+          alt='just projects'
+          width={150}
+          height={150}
+        />
 
         <ul className='flex items-center gap-8'>
           {links.map((link) => (
-            <li key={link.title}>
+            <li
+              key={link.title}
+              className='hover:text-primary-700 transition-all duration-300 ease-linear'
+            >
               <Link href={link.href}>{link.title}</Link>
             </li>
           ))}
