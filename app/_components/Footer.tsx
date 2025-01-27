@@ -5,16 +5,12 @@ import Image from 'next/image';
 
 const links = [
   {
-    title: 'Home',
-    href: '/',
-  },
-  {
     title: 'Privacy and Policy',
     href: '/privacy',
   },
   {
-    title: 'FAQs',
-    href: '/faqs',
+    title: 'Terms and Condtions',
+    href: '/terms',
   },
 ];
 
