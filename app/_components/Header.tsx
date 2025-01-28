@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '@/public/Logo.svg';
 import Image from 'next/image';
 import Menu from './Menu';
@@ -24,6 +24,15 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   const handleToggleMenu = () => setOpenMenu((s) => !s);
+
+  useEffect(() => {
+    if (openMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'none';
+    }
+  }, [openMenu]);
+
   return (
     <header className='px-4 md:px-16 py-4 bg-primary-50'>
       <div className='max-w-7xl mx-auto flex items-center justify-between'>
