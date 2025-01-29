@@ -23,7 +23,7 @@ const ToasterBar = () => {
         },
 
         success: {
-          duration: 10000,
+          duration: 3000,
           iconTheme: {
             primary: '',
             secondary: 'white',
