@@ -4,21 +4,19 @@ import Link from 'next/link';
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import logo from '@/public/Logo.svg';
 import { createPortal } from 'react-dom';
+import { links } from '../_utils/data';
 
 interface Props {
-  links: { title: string; href: string }[];
   children: React.ReactNode;
 }
 
 interface MenuContextProp {
-  links: { title: string; href: string }[];
   opened: boolean;
   openMenu: () => void;
   closeMenu: () => void;
 }
 
 const defaultMenuContext: MenuContextProp = {
-  links: [],
   opened: false,
   openMenu: () => {},
   closeMenu: () => {},
@@ -26,7 +24,7 @@ const defaultMenuContext: MenuContextProp = {
 
 const MenuContext = createContext<MenuContextProp>(defaultMenuContext);
 
-const Menu = ({ children, links }: Props) => {
+const Menu = ({ children }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const openMenu = () => setIsMenuOpen(true);
   const closeMenu = () => setIsMenuOpen(false);
@@ -45,9 +43,7 @@ const Menu = ({ children, links }: Props) => {
   }, [isMenuOpen]);
 
   return (
-    <MenuContext.Provider
-      value={{ links, opened: isMenuOpen, openMenu, closeMenu }}
-    >
+    <MenuContext.Provider value={{ opened: isMenuOpen, openMenu, closeMenu }}>
       {children}
     </MenuContext.Provider>
   );
@@ -65,7 +61,7 @@ const Open = () => {
 };
 
 const Window = () => {
-  const { links, closeMenu, opened } = useContext(MenuContext);
+  const { closeMenu, opened } = useContext(MenuContext);
 
   if (!opened) return null;
 

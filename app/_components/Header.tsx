@@ -4,21 +4,7 @@ import React from 'react';
 import logo from '@/public/Logo.svg';
 import Image from 'next/image';
 import Menu from './Menu';
-
-const links = [
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Curriculum',
-    href: '/curriculum',
-  },
-  {
-    title: 'FAQs',
-    href: '/#faqs',
-  },
-];
+import { links } from '../_utils/data';
 
 const Header = () => {
   return (
@@ -34,7 +20,7 @@ const Header = () => {
           />
         </Link>
 
-        <Menu links={links}>
+        <Menu>
           <Menu.Open />
           <Menu.Window />
         </Menu>

@@ -1,3 +1,18 @@
+export const links = [
+  {
+    title: 'Home',
+    href: '/',
+  },
+  {
+    title: 'Curriculum',
+    href: '/curriculum',
+  },
+  {
+    title: 'FAQs',
+    href: '/#faqs',
+  },
+];
+
 export const terms = [
   {
     id: 1,
