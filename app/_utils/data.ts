@@ -125,3 +125,48 @@ export const policies = [
     ],
   },
 ];
+
+export const frequentlyAskedQuestions = [
+  {
+    id: 1,
+    question: 'How can I enrol for the training?',
+    answer:
+      'You can enrol for the training by clicking on the Enrol button on the top right corner of the page. You will be redirected to the enrolment page where you will be required to fill in your details and make payment.',
+  },
+  {
+    id: 2,
+    question: 'Would I have to pay to enrol for the training?',
+    answer:
+      'Yes, you will have to pay to enrol for the training. The cost of the training is N10,000.00. You can pay using your debit card or bank transfer.',
+  },
+  {
+    id: 3,
+    question: 'What are the things needed for the training?',
+    answer:
+      'You will need a laptop or desktop computer, a stable internet connection, and a good headset with a microphone.',
+  },
+  {
+    id: 4,
+    question: 'Can I enrol for the two tracks?',
+    answer:
+      'Yes, you can enrol for both tracks. However, you will have to pay for each track separately.',
+  },
+  {
+    id: 5,
+    question: "What happens if I enrol and I'm not active?",
+    answer:
+      "If you enrol and you're not active, you will be removed from the training. You will have to re-enrol if you want to be part of the training.",
+  },
+  {
+    id: 6,
+    question: 'Will I get a personal mentor assigned to me?',
+    answer:
+      'Yes, you will get a personal mentor assigned to you. Your mentor will be available to answer your questions and guide you through the training.',
+  },
+  {
+    id: 7,
+    question: 'Will I get to see President Buhari after the training?',
+    answer:
+      "No, you will not get to see President Buhari after the training. However, you will get to see the President's wife, Aisha Buhari.",
+  },
+];
