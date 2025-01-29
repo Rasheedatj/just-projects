@@ -4,7 +4,6 @@ import FAQs from './_components/FAQs';
 const page = () => {
   return (
     <div>
-      body
       <FAQs />
     </div>
   );
