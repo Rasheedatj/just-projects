@@ -7,6 +7,10 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    backgroundImage: {
+      faqImage1: 'url(/faq-bg-1.svg)',
+      faqImage2: 'url(/faq-bg-2.svg)',
+    },
     extend: {
       colors: {
         primary: {
