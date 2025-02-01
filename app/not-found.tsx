@@ -7,6 +7,7 @@ const NotFound = () => {
   return (
     <div className='flex flex-col py-20 px-8 items-center justify-center text-center'>
       <h1 className='font-semibold text-xl text-black'>404 Error</h1>
+
       <Image
         src={notFound}
         // placeholder='blur'

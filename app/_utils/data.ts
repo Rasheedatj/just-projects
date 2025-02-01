@@ -185,3 +185,24 @@ export const frequentlyAskedQuestions = [
       "No, you will not get to see President Buhari after the training. However, you will get to see the President's wife, Aisha Buhari.",
   },
 ];
+
+export const perks = [
+  {
+    id: 1,
+    title: 'Fully Remote',
+    description:
+      'Our fully remote training allows you to take classes and learn from the comfort of your own home or office. ',
+  },
+  {
+    id: 2,
+    title: 'Beginner Friendly',
+    description:
+      'We will be focusing on the basics of UI/UX design and Web development and building up your skills step by step. ',
+  },
+  {
+    id: 3,
+    title: 'Hands-on Experience',
+    description:
+      'Participants will actively engage in the learning process and apply what they have learned in a real life setting.',
+  },
+];

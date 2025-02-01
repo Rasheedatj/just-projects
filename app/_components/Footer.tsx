@@ -38,7 +38,9 @@ const Footer = () => {
         </ul>
 
         {/* <div className='flex items-center gap-4'></div> */}
-        <p>&copy; {new Date().getFullYear()} Just Projects</p>
+        <p className='text-sm'>
+          &copy; {new Date().getFullYear()} Just Projects
+        </p>
       </div>
     </footer>
   );
