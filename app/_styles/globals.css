@@ -13,11 +13,11 @@
 }
 
 .faq {
-  background-position: right 16% top 20%, left 12% bottom 8%;
+  background-position: right 16% top 20%, left 12% bottom 5%;
 }
 
 @media (max-width: 420px) {
   .faq {
-    background-position: right 6% top 7%, left -30% bottom 5%;
+    background-position: right 6% top 3%, left -30% bottom 0%;
   }
 }
